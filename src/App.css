@@ -1,0 +1,349 @@
+.login-box{
+  margin: 20vh 80vh;
+  padding: 20px;
+  height: 55vh;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px;
+  background-color: white;
+}
+
+.label{
+  margin: 5px;
+}
+
+.input{
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  height: 40px;
+  width:95%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px;
+}
+
+.register-btn{
+  transition: 200ms;
+  margin: 0px 10vh;
+  font-size: 18px;
+  text-decoration: none;
+  height: 35px;
+  width: 150px;
+  border-radius: 10px;
+  border: 0px;
+  padding: 0px 20px;
+  background-color: rgb(0, 175, 255);
+}
+button:hover{
+  transition: 200ms;
+  background-color: white;
+  box-shadow: rgb(0, 175, 255) 0px 0px 5px 0px;
+}
+.to-reg-log:hover{
+  transition: 200ms;
+  color: rgb(0, 175, 255);
+}
+.to-reg-log{
+  transition: 200ms;
+}
+
+.landingpage-background{
+  margin: 0px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../public/background.jpg") no-repeat;
+  background-size: cover;
+}
+.login-logo{
+  border-radius: 100px;
+}
+.image{
+  text-align: center;
+}
+
+.home>h2{
+  text-align: center;
+}
+
+.header{
+  display: grid;
+  grid-template-columns: 20vh 160vh 20vh;
+  height: 10vh;
+  position:static;
+  box-shadow: 0px 0px 10px 0px grey;
+}
+.nav-bar{
+  text-align: center;
+  background-color: white;
+}
+.nav-bar>li{
+  display: inline;
+  font-size: 20px;
+  padding: 10px 25px;
+}
+.nav-bar>li:hover{
+  text-decoration:underline;
+}
+
+.logout-btn{
+  transition: 200ms;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(0, 175, 255);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 2.5vh;
+}
+.logout-btn:hover{
+  transition: 200ms;
+  box-shadow: rgb(0, 175, 255) 0px 0px 5px 0px;
+  background-color: white;
+}
+
+.user-row>li{
+  display: inline;
+  padding: 10px;
+}
+.user-row{
+  box-shadow: 0px 0px 5px 0px;
+  border-radius: 15px;
+  background-color: white;
+  text-align: center;
+  margin: 20px 10vh;
+  display: grid;
+  max-width: 90vh;
+  grid-template-columns: 40vh 20vh 20vh;
+}
+.date{
+  font-size: 11px;
+  color: grey;
+}
+.alert{
+  color: red;
+  font-size: 14px;
+}
+.userlist{
+  padding: 10px;
+  text-align: center;
+}
+.newslist{
+  padding: 10px;
+  text-align: center;
+}
+.new-card{
+  text-align: left;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 60vh;
+  margin: 15px 15vh;
+}
+.add-new-btn{
+  transition: 200ms;
+  text-align: center;
+  margin: 0px 45% ;
+  padding: 10px;
+  background-color: rgb(0, 175, 255);
+  box-shadow: 0px 0px 5px 0px grey;
+  border-radius: 10px;
+  width: 160px;
+  height: 25px;
+  color: white;
+  font-weight: bold;
+}
+.add-new-btn:hover{
+  transition: 200ms;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 5px 0px rgb(0, 175, 255);
+}
+.chapterslist{
+  padding: 10px;
+  text-align: center;
+}
+
+.main-box{
+  background-image: url("../public/background.jpg");
+  min-height:48.7rem;
+}
+
+.admin-user-panel{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  margin-left: 2.5vh;
+  box-shadow: 0px 0px 5px 0px;
+}
+
+.edit-user-box{
+  background-color: white;
+  min-height: 50vh;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px;
+}
+.edit-user-btn{
+  transition: 200ms;
+  background-color: rgb(0, 175, 255);
+  max-width: 50px;
+  margin: 2.5px;
+  border-radius: 10px;
+}
+.edit-user-btn:hover{
+  transition: 200ms;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgb(0, 175, 255);
+}
+
+.save-btn{
+  transition: 200ms;
+  padding: 5px;
+  margin: 1% 45%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px rgb(0, 175, 255);
+  max-width: 100px;
+}
+.save-btn:hover{
+  transition: 200ms;
+  background-color: rgb(0, 175, 255);
+  color: white;
+}
+.delete-btn{
+  transition: 200ms;
+  padding: 5px;
+  margin: 1% 45%;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  max-width: 100px;
+}
+.delete-btn:hover{
+  transition: 200ms;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px red;
+  color: red;
+}
+.confirm-delete-box{
+  background-color: rgba(0, 0, 0, 0.8);
+  position:fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.confirm-delete-box>div{
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px;
+  height: 15vh;
+  width: 60vh;
+  margin: 20% 35%;
+}
+
+.create-new-box{
+  background-color: rgba(0, 0, 0, 0.8);
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.create-new-box>div{
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10% 35%;
+  height: 40vh;
+}
+.create-new-title{
+  border-radius: 5px;
+  border: solid 1px;
+  padding: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px;
+  height: 24px;
+  width: 40vh;
+}
+.create-new-text{
+  border-radius: 5px;
+  width: 40vh;
+  height: 20vh;
+  margin: 15px;
+  padding: 5px;
+  resize: none;
+}
+.create-new-btn{
+  transition: 200ms;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px 50px;
+  background-color: rgb(0, 175, 255);
+  color: white;
+}
+.create-new-btn:hover{
+  transition: 200ms;
+  color: rgb(0, 175, 255);
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgb(0, 175, 255);
+}
+.cancel-new-btn{
+  transition: 200ms;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px 50px;
+  background-color: red;
+  color: white;
+}
+.cancel-new-btn:hover{
+  transition: 200ms;
+  color: red;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px red;
+}
+.edit-new-btn{
+  transition: 200ms;
+  color: white;
+  background-color: rgb(0, 175, 255);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  width: 10%;
+}
+.edit-new-btn:hover{
+  transition: 200ms;
+  color: rgb(0, 175, 255);
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgb(0, 175, 255);
+}
+.newslist{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+h1{
+  text-align: center;
+}
+.edit-new-box{
+  background-color: rgba(255, 255, 255, 0.5);
+  min-height: 50vh;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px;
+}
+.edit-new-title{
+  padding: 10px;
+  width: 60vh;
+  border-radius: 5px;
+  border: solid 1px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.edit-new-text{
+  resize: none;
+  margin: 15px;
+  height: 40vh;
+  width: 80vh;
+}
