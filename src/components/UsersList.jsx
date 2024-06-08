@@ -9,6 +9,7 @@ const UsersList = ({users, getUserList}) => {
 
     const [editMail, setEditMail] = useState("")
     const [editRol, setEditRol] = useState("")
+    const [changeUserRol, setChangeUserRol] = useState("")
 
     const [confirmDelete, setConfirmDelete] = useState(false)
 
@@ -29,9 +30,15 @@ const UsersList = ({users, getUserList}) => {
             if (editMail === "numenportal@gmail.com") {
                 throw new Error("No se permite editar la cuenta de administrador")
             }else{
-                await updateDoc(queryUser, {
-                    rol:editRol
+                if(changeUserRol!=="admin"){
+                    await updateDoc(queryUser, {
+                        rol:"user"
+                    })
+                }else{
+                    await updateDoc(queryUser, {
+                    rol:changeUserRol
                 })
+                }
                 
                 alert(`Se han aplicado los cambios de ${editMail} correctamente`)
             } 
@@ -96,7 +103,7 @@ const UsersList = ({users, getUserList}) => {
                             editMail === "numenportal@gmail.com" ? <span>Rol: Administrador</span>:
                             <>
                             <span>Rol: </span>
-                            <select name="rol">
+                            <select name="rol" onChange={e=>setChangeUserRol(e.target.value)}>
                                 <option value="user">Usuario</option>
                                 <option value="admin">Administrador</option>
                             </select>

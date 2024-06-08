@@ -49,7 +49,7 @@ button:hover{
 
 .landingpage-background{
   margin: 0px;
-  position: absolute;
+  position:static;
   height: 100%;
   width: 100%;
   background: url("../public/background.jpg") no-repeat;
@@ -127,18 +127,21 @@ button:hover{
   padding: 10px;
   text-align: center;
 }
+.newslist-box{
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 10px 25%;
+}
 .newslist{
   padding: 10px;
-  text-align: center;
 }
 .new-card{
-  text-align: left;
   background-color: white;
   box-shadow: 0px 0px 5px 0px;
   border-radius: 10px;
-  padding: 15px;
-  max-width: 60vh;
-  margin: 15px 15vh;
+  padding: 20px;
+  margin: 20px 10%;
 }
 .add-new-btn{
   transition: 200ms;
@@ -162,6 +165,31 @@ button:hover{
 .chapterslist{
   padding: 10px;
   text-align: center;
+}
+
+.chapters-grid{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  height: 60vh
+}
+.chapterlist-box{
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 40vh;
+  box-shadow: 0px 0px 5px 0px grey;
+  height: fit-content;
+}
+.chapter-row:hover{
+  transition: 200ms;
+  color: rgb(0, 175, 255);
+}
+.chapter-view{
+  padding: 10px;
 }
 
 .main-box{
@@ -253,11 +281,12 @@ button:hover{
   width: 100%;
 }
 .create-new-box>div{
+  text-align: center;
   background-color: white;
   border-radius: 10px;
   padding: 15px;
   margin: 10% 35%;
-  height: 40vh;
+  height: 45vh;
 }
 .create-new-title{
   border-radius: 5px;
@@ -282,68 +311,44 @@ button:hover{
   padding: 10px 20px;
   border-radius: 10px;
   margin: 20px 50px;
-  background-color: rgb(0, 175, 255);
+  background-color: rgb(0, 150, 50);
   color: white;
 }
 .create-new-btn:hover{
   transition: 200ms;
-  color: rgb(0, 175, 255);
+  color: rgb(0, 150, 50);
   background-color: white;
-  box-shadow: 0px 0px 5px 0px rgb(0, 175, 255);
+  box-shadow: 0px 0px 5px 0px rgb(0, 150, 50);
 }
 .cancel-new-btn{
   transition: 200ms;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 20px 50px;
-  background-color: red;
-  color: white;
+  background-color: white;
+  color: rgb(0, 175, 255);
+  box-shadow: 0px 0px 5px 0px rgb(0, 175, 255);
 }
 .cancel-new-btn:hover{
+  transition: 200ms;
+  color: white;
+  background-color: rgb(0, 175, 255);
+}
+.delete-new-btn{
+  transition: 200ms;
+  color: white;
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 10%;
+}
+.delete-new-btn:hover{
   transition: 200ms;
   color: red;
   background-color: white;
   box-shadow: 0px 0px 5px 0px red;
 }
-.edit-new-btn{
-  transition: 200ms;
-  color: white;
-  background-color: rgb(0, 175, 255);
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-  width: 10%;
-}
-.edit-new-btn:hover{
-  transition: 200ms;
-  color: rgb(0, 175, 255);
-  background-color: white;
-  box-shadow: 0px 0px 5px 0px rgb(0, 175, 255);
-}
-.newslist{
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
 h1{
   text-align: center;
-}
-.edit-new-box{
-  background-color: rgba(255, 255, 255, 0.5);
-  min-height: 50vh;
-  border-radius: 15px;
-  box-shadow: 0px 0px 5px 0px;
-}
-.edit-new-title{
-  padding: 10px;
-  width: 60vh;
-  border-radius: 5px;
-  border: solid 1px;
-  font-size: 22px;
-  font-weight: bold;
-}
-.edit-new-text{
-  resize: none;
-  margin: 15px;
-  height: 40vh;
-  width: 80vh;
 }

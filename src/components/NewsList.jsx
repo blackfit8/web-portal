@@ -14,7 +14,6 @@ const NewsList = ({user}) => {
 
   const [confirmDel, setConfirmDel] = useState(false)
   const [delTitle, setDelTitle] = useState("")
-  const [delDesc, setDelDesc] = useState("")
 
   const addNew = async ()=>{
     try {
@@ -32,7 +31,6 @@ const NewsList = ({user}) => {
   const toDelete = (title, desc) =>{
     setConfirmDel(true)
     setDelTitle(title)
-    setDelDesc(desc)
   }
 
   const deleteNew = async ()=>{
@@ -64,20 +62,20 @@ const NewsList = ({user}) => {
         dataNews.push(doc.data())
       })
       setNewsList(dataNews)
-      console.log(newsList);
     }
     getNews()
   }, [createNew])
   
 
   return (
-    <div>
+    <div className='newslist'>
       <h1>Noticias</h1>
       <div>
       {
         createNew === true ? 
         <div className='create-new-box'>
           <div>
+            <h2>Crea tu publicación</h2>
             <input className='create-new-title' placeholder='Titulo' onChange={e=>setNewTitle(e.target.value)}></input><br />
             <textarea className='create-new-text' placeholder='Empieza a escribir tu noticia...' rows="10" cols="50" onChange={e=>setNewDesc(e.target.value)}></textarea>
             <div><span className='cancel-new-btn' onClick={e=>setCreateNew(false)}>Cancelar</span><span className='create-new-btn' onClick={addNew}>Publicar</span></div>
@@ -89,7 +87,7 @@ const NewsList = ({user}) => {
         <div className='confirm-delete-box'>
           <div>
             <p>¿Estas seguro de que quieres eliminar esta noticia?</p>
-            <div><span className='cancel-new-btn' onClick={e=>setConfirmDel(false)}>Cancelar</span><span className='create-new-btn' onClick={deleteNew}>Eliminar</span></div>
+            <div><span className='cancel-new-btn' onClick={e=>setConfirmDel(false)}>Cancelar</span><span className='delete-new-btn' onClick={deleteNew}>Eliminar</span></div>
           </div>
         </div>:""
       }
@@ -100,21 +98,22 @@ const NewsList = ({user}) => {
           +Añadir Noticia
         </div>:""
       }
-      <div className='newslist'>
-      
-      <div>
+      <div className='newslist-box'>
       {
         newsList.map((enew, index) => (
-          <div key={index} className='new-card'>
-          <h2>{enew.title}</h2>
-          <p className='date'> Publicado: {enew.date.toDate().toLocaleString('es-ES')}</p>
-          <p>{enew.description}</p>
-          {
-            user.rol === "admin" ? <div className='delete-new-btn' onClick={e=>toDelete(enew.title, enew.description)}>Eliminar</div>:""
-          }
+          <div key={index}>
+            <div className='new-card'>
+              <h2>{enew.title}</h2>
+              <p className='date'> Publicado: {enew.date.toDate().toLocaleString('es-ES')}</p>
+              <p>{enew.description}</p>
+              {
+                user.rol === "admin" ? <><hr /><div className='delete-new-btn' onClick={e=>toDelete(enew.title, enew.description)}>Eliminar</div></>:""
+              }
+            </div>
+            <hr/>
           </div>
         ))
-      }</div>    
+      }   
       </div>
     </div>
   )
