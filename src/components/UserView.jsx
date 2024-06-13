@@ -42,7 +42,12 @@ const UserView = ({user}) => {
       <div className='main-box'>
       
       {
-          demoBtn === true ? <div><a href="https:\\youtube.com" target='_blank' rel='noreferrer'>DEMO</a></div>: ""
+          demoBtn === true ? <div className='game' >
+            <h1>DEMO: Un mundo perdido</h1>
+              <div className='demo-btn'>
+                <a href="https://lost-world-cae850de3278.herokuapp.com/" target='_blank' rel='noreferrer'><img src="menu.png" alt="" height="500vh"/></a> 
+              </div>
+            </div>: ""
         }
         {
           newsBtn === true ? <NewsList user={user}/> : ""

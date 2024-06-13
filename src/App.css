@@ -352,3 +352,14 @@ button:hover{
 h1{
   text-align: center;
 }
+
+.game{
+  padding: 10px;
+  text-align: center;
+}
+
+.demo-btn{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
